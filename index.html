@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ility — something new is on the way.">
+  <title>ility — Coming Soon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="bg__orb bg__orb--1"></div>
+    <div class="bg__orb bg__orb--2"></div>
+    <div class="bg__grid"></div>
+  </div>
+
+  <main class="page">
+    <header class="brand">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__name">ility</span>
+    </header>
+
+    <section class="hero">
+      <p class="hero__eyebrow">Coming soon</p>
+      <h1 class="hero__title">
+        Something thoughtful<br>
+        <em>is taking shape.</em>
+      </h1>
+      <p class="hero__lead">
+        We're building a new space on the web. Check back soon — or leave your email and we'll let you know when we launch.
+      </p>
+    </section>
+
+    <form class="notify" action="#" method="post" onsubmit="return false;">
+      <label class="notify__label" for="email">Get notified</label>
+      <div class="notify__row">
+        <input
+          class="notify__input"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          autocomplete="email"
+          required
+        >
+        <button class="notify__btn" type="submit">Notify me</button>
+      </div>
+      <p class="notify__hint" id="notify-hint" role="status" aria-live="polite"></p>
+    </form>
+
+    <footer class="footer">
+      <p class="footer__copy">&copy; <span id="year"></span> ility</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.querySelector('.notify').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var hint = document.getElementById('notify-hint');
+      hint.textContent = 'Thanks — we\'ll be in touch when we launch.';
+      hint.classList.add('notify__hint--visible');
+      this.querySelector('.notify__input').value = '';
+    });
+  </script>
+</body>
+</html>
