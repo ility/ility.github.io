@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact UH Consulting for MBSE, SysML 2.0, and systems engineering consulting. Vancouver, BC. +1 778 668 8693">
+  <link rel="canonical" href="https://uh-consulting.ca/contact.html">
+  <title>Contact — UH Consulting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;1,8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="index.html">
+        <img class="logo__mark" src="assets/img/logo-mark.svg" alt="" width="36" height="36">
+        <span>UH Consulting</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="services.html">Services</a></li>
+          <li><a class="nav__link" href="industries.html">Industries</a></li>
+          <li><a class="nav__link" href="case-studies.html">Case Studies</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+          <li><a class="nav__link" href="resources.html">Resources</a></li>
+          <li class="nav__cta"><a class="btn btn--primary" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero hero--inner">
+      <div class="hero__inner">
+        <p class="eyebrow">Contact</p>
+        <h1>Book a consultation</h1>
+        <p class="lead">Tell us about your program, engineering challenges, or MBSE goals. We'll respond within two business days.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-layout">
+
+          <div class="contact-info">
+            <h3>Get in touch</h3>
+            <div class="contact-info__item">
+              <p class="contact-info__label">Phone</p>
+              <p class="contact-info__value"><a href="tel:+17786688693">+1 778 668 8693</a></p>
+            </div>
+            <div class="contact-info__item">
+              <p class="contact-info__label">Email</p>
+              <p class="contact-info__value"><a href="mailto:hello@uh-consulting.ca">hello@uh-consulting.ca</a></p>
+            </div>
+            <div class="contact-info__item">
+              <p class="contact-info__label">Office</p>
+              <p class="contact-info__value">Vancouver, BC, Canada</p>
+            </div>
+            <div class="contact-info__item">
+              <p class="contact-info__label">Business Hours</p>
+              <p class="contact-info__value">Monday – Friday, 9:00 AM – 5:00 PM PT</p>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <!--
+              Form backend integration options:
+
+              Formspree:
+                action="https://formspree.io/f/YOUR_FORM_ID"
+                method="POST"
+
+              Netlify Forms:
+                Add data-netlify="true" and name="contact" to the form element.
+                Netlify will handle submissions automatically on deploy.
+
+              Custom backend:
+                POST form data to your API endpoint (e.g. /api/contact)
+                and update the submit handler in assets/js/main.js.
+            -->
+            <form id="contact-form" action="#" method="post" novalidate>
+              <div id="form-success" class="form-success" tabindex="-1">
+                Thank you for your message. We'll be in touch shortly.
+              </div>
+
+              <div class="form-group" id="group-name">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+                <p class="form-error" id="error-name"></p>
+              </div>
+
+              <div class="form-group" id="group-email">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+                <p class="form-error" id="error-email"></p>
+              </div>
+
+              <div class="form-group" id="group-company">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" autocomplete="organization" required>
+                <p class="form-error" id="error-company"></p>
+              </div>
+
+              <div class="form-group" id="group-project-type">
+                <label for="project-type">Project Type</label>
+                <select id="project-type" name="project-type" required>
+                  <option value="">Select a project type</option>
+                  <option value="mbse-sysml">MBSE / SysML 2.0</option>
+                  <option value="systems-architecture">Systems Architecture</option>
+                  <option value="requirements">Requirements Engineering</option>
+                  <option value="digital-thread">Digital Thread</option>
+                  <option value="cad-mechanical">CAD / Mechanical</option>
+                  <option value="training">Training &amp; Mentoring</option>
+                  <option value="other">Other</option>
+                </select>
+                <p class="form-error" id="error-project-type"></p>
+              </div>
+
+              <div class="form-group" id="group-message">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <p class="form-error" id="error-message"></p>
+              </div>
+
+              <button class="btn btn--primary" type="submit">Send Message</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <img class="logo__mark" src="assets/img/logo-mark.svg" alt="" width="36" height="36">
+            <span>UH Consulting</span>
+          </a>
+          <p>Systems engineering and digital engineering consultancy. Vancouver, BC, Canada.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#mbse-sysml">MBSE &amp; SysML 2.0</a></li>
+            <li><a href="services.html#systems-architecture">Systems Architecture</a></li>
+            <li><a href="services.html#requirements-engineering">Requirements Engineering</a></li>
+            <li><a href="services.html#digital-thread">Digital Thread</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Get in touch</a></li>
+            <li><a href="tel:+17786688693">+1 778 668 8693</a></li>
+            <li><a href="mailto:hello@uh-consulting.ca">hello@uh-consulting.ca</a></li>
+            <li>Vancouver, BC</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> UH Consulting. All rights reserved.</span>
+        <span>uh-consulting.ca</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
